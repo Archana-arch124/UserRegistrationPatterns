@@ -57,3 +57,14 @@ then
 else
      echo " Password is invalid "
 fi
+#Password with atleast 1 Uppercase
+read -p "Enter the Password : " Password
+echo $Password
+
+patt='^(?=.{8,})(?=.*[A-Z])(?=.*[a-z]).*$'
+if [[ $Password =~ $patt ]]
+then
+     echo " Password is valid "
+else
+     echo " Password is invalid "
+fi
