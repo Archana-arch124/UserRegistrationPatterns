@@ -92,3 +92,15 @@ else
      echo " Password is invalid "
 fi
 
+#Checks all email Samples
+
+read -p "enter email address : " Email
+echo $Email
+
+patt='[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+[.]{1}[a-z]{2,3}([.][a-z]{2})*$'
+if [[ $Email =~ $patt ]]
+then
+     echo " Email is valid "
+else
+     echo " Email is invalid "
+fi
