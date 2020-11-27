@@ -80,3 +80,15 @@ else
      echo " Password is invalid "
 fi
 
+#password with 1 special character
+read -p "Enter the Password : " Password
+echo $Password
+
+patt='^(?=.{8,})(?=.*[A-Z])(?=.*[@+_$-&])(?=.*[0-9])(?=.*[a-z]).*$'
+if [[ $Password =~ $patt ]]
+then
+     echo " Password is valid "
+else
+     echo " Password is invalid "
+fi
+
