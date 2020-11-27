@@ -46,3 +46,14 @@ then
 else
      echo " Mobile is invalid "
 fi
+#Password with atleast 8 Characters
+read -p "Enter the Password : " Password
+echo $Password
+
+patt='^.{8,}$'
+if [[ $Password =~ $patt ]]
+then
+     echo " Password is valid "
+else
+     echo " Password is invalid "
+fi
