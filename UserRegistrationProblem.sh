@@ -68,3 +68,15 @@ then
 else
      echo " Password is invalid "
 fi
+#password with atleast 1 numeric value
+read -p "Enter the password : " Password
+echo $Password
+
+patt='^(?=.{8,})(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).*$'
+if [[ $Password =~ $patt ]]
+then
+     echo " Password is valid "
+else
+     echo " Password is invalid "
+fi
+
