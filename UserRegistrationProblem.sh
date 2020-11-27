@@ -35,3 +35,14 @@ else
      echo " Email is invalid "
 fi
 
+#Mobile number with Country Code
+read -p "Enter Mobile Number with country Code : " Mobile
+echo $Mobile
+
+patt='^[91]{2}[ ][0-9]{10}$'
+if [[ $Mobile =~ $patt ]]
+then
+     echo " Mobile is valid "
+else
+     echo " Mobile is invalid "
+fi
